@@ -3,6 +3,9 @@ package practise.juc;
  * 
  * @author HuXiaoHui
  *	模拟 CAS 算法
+ *	
+ *	CAS算法可称为无锁算法，不会设计到上下文切换，从用户态切换到核心态。
+ *		节省资源	
  *
  *	使用  CAS（Compare-And-Swap）算法保证数据的原子性
  *				cas算法是硬件对于并发操作共享数据的支持
