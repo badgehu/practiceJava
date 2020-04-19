@@ -47,6 +47,8 @@ public class ThreadPrint {
                         e.printStackTrace();
                     }
                 }
+                // 否则无法停止
+                lock.notify();
             }
         }
     }
@@ -67,6 +69,8 @@ public class ThreadPrint {
                         e.printStackTrace();
                     }
                 }
+                // 否则无法停止
+                lock.notify();
             }
         }
     }
