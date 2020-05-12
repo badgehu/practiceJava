@@ -21,27 +21,24 @@ public class Thread_ABC_Sync {
 
     static class PrintThread implements Runnable {
         AtomicInteger count;
-        int order;
+        int index;
         String name;
 
-        PrintThread(AtomicInteger count, String name, int order) {
+        PrintThread(AtomicInteger count, String name, int index) {
             this.count = count;
             this.name = name;
-            this.order = order;
+            this.index = index;
         }
 
         @Override
         public void run() {
-            while (true){
+            for (int i = 0; i < 10; ) {
                 synchronized (count) {
-                    // 当打印ABC连续十次退出
-                    if (count.get() == 3*10){
-                        break;
-                    }
-                    if (count.get() % 3 == order) {
+                    if (count.get() % 3 == index) {
                         System.out.println(name);
                         count.getAndIncrement();
                         count.notifyAll();
+                        i++;//i++移除来，表示只有线程进入并打印才+1
                     } else {
                         try {
                             count.wait();
@@ -54,3 +51,4 @@ public class Thread_ABC_Sync {
         }
     }
 }
+

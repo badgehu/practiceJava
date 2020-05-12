@@ -11,19 +11,19 @@ import java.util.Set;
 public class SetAndMapDemo {
 	public static void main(String[] args) {
 		Set<String> set = new HashSet<String>();
-		set.add("ÆëÌì´óÊ¥");
-		set.add("Öí¸Õ÷à");
-		set.add("É³Ê¦µÜ");
-		set.add("°×ÁúÂí");
+		set.add("??????");
+		set.add("?????");
+		set.add("????");
+		set.add("??????");
 		Iterator<String> iterator = set.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
 		System.out.println(set);
 		Map<String, String> map = new HashMap<String,String>();
-		map.put("´óÊ¦ĞÖ", "ËïÎò¿Õ");
-		map.put("¶şÊ¦ĞÖ", "Öí¸Õ÷à");
-		map.put("ÈıÊ¦µÜ", "É³Îò¾»");
+		map.put("?????", "?????");
+		map.put("?????", "?????");
+		map.put("?????", "???");
 		//1
 		Set<String> keySet = map.keySet();
 		for(String str:keySet) {

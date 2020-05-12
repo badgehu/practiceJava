@@ -2,7 +2,18 @@ package practise.exception;
 
 public class ExceptionTest {
 	public static void main(String[] args) {
-		
+		System.out.println(testException());
+	}
+	public static int testException(){
+		int i = 0;
+		try{
+			i=666;
+			return i;
+		}catch (Exception e){
+			e.printStackTrace();
+		}finally {
+			return  777;
+		}
 	}
 }
 class Teacher{
@@ -13,7 +24,8 @@ class Teacher{
 		this.name = name;
 		noteBook = new NoteBook();
 	}
-	
+
+
 }
 class NoteBook{
 	private int state = 1;
@@ -25,7 +37,7 @@ class NoteBook{
 		}
 	}
 	public void reset() {
-		System.out.println("µÁƒ‘÷ÿ∆Ù¡À£°");
+		System.out.println("???????????");
 	}
 }
 class BlueScreenException extends Exception{
