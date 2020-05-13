@@ -1,4 +1,4 @@
-package practise.thread.按序打印;
+package practise.thread.leetcodesolution;
 
 /**
  * @author badgehu

@@ -1,4 +1,4 @@
-package practise.thread.Foobar;
+package practise.thread.leetcodesolution;
 
 /**
  * @author badgehu

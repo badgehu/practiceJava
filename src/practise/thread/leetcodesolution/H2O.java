@@ -1,4 +1,4 @@
-package practise.thread.h2osolution;
+package practise.thread.leetcodesolution;
 
 import java.util.concurrent.Semaphore;
 

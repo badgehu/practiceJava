@@ -1,4 +1,4 @@
-package practise.thread.DiningPhilosophers;
+package practise.thread.leetcodesolution;
 
 import java.util.concurrent.Semaphore;
 
