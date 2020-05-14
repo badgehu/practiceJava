@@ -41,7 +41,7 @@ public class Bath3 {
                 }
                 bathRoomSema.acquire();  // 获取浴室数量
                 manCount.incrementAndGet();
-                System.out.println(name + "男" +"洗澡");
+                System.out.println(name + "男" +"洗澡"+"manCount"+manCount.get()+"womanCount"+womanCount.get());
                 Thread.sleep(10);
                 if (manCount.decrementAndGet() == 0) {
                     sexSema.release(); // 信号量打开，开放给女士用
@@ -69,7 +69,7 @@ public class Bath3 {
                 }
                 bathRoomSema.acquire();
                 womanCount.incrementAndGet();
-                System.out.println(name + "女" +"洗澡");
+                System.out.println(name + "女" +"洗澡"+"manCount"+manCount.get()+"womanCount"+womanCount.get());
                 Thread.sleep(10);
                 if (womanCount.decrementAndGet() == 0) {
                     sexSema.release(); // 信号量打开，开放给男士用
