@@ -10,6 +10,16 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Bath3 {
 
+    public static void main(String[] args) {
+        for (int i=0;i<10;i++){
+            if (i%2==0){
+                new Thread(new Man("线程"+i)).start();
+            }else {
+                new Thread(new Woman("线程"+i)).start();
+            }
+        }
+    }
+
     static Semaphore bathRoomSema = new Semaphore(3); //浴室资源
     static Semaphore sexSema = new Semaphore(1);  //性别锁
     static AtomicInteger manCount = new AtomicInteger(0);//当前浴室男人数量
