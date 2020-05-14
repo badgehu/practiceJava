@@ -1,8 +1,5 @@
 package practise.thread;
 
-import sun.misc.Unsafe;
-
-import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -12,11 +9,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @date 2020-05-14 10:12
  */
 public class Bath3 {
-    static Semaphore bathRoomSema = new Semaphore(3);
+
+    static Semaphore bathRoomSema = new Semaphore(3); //浴室资源
     static Semaphore sexSema = new Semaphore(1);  //性别锁
-    static AtomicInteger manCount = new AtomicInteger(0);
-    static AtomicInteger womanCount = new AtomicInteger(0);
-    // 0：空，1：男，2：女
+    static AtomicInteger manCount = new AtomicInteger(0);//当前浴室男人数量
+    static AtomicInteger womanCount = new AtomicInteger(0);//当前浴室女人数量
+    // 0：无人占用，1：男，2：女
     static AtomicInteger flag = new AtomicInteger(0);
     static class Man implements Runnable {
         String name;
